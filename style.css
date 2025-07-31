@@ -1,0 +1,247 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+}
+nav,p,h2,ul,a{
+    font-family: "Inter", sans-serif;
+}
+.banner-text h1,.plant-title h1,.deals-title h1{
+    font-family: "Noto Serif", serif;
+}
+body{
+    width: 80%;
+    margin: 0 auto;
+    background-color: #f1f1f1;
+}
+/* shared styles */
+.banner-text span,.plant-title span,.deals-title span{
+    color: #E95A08;
+}
+.text-gray{
+    color: #8987A1;
+}
+.btn{
+    background-color: #E95A08;
+    color: white;
+    border: none;
+    padding: 20px 80px;
+    font-size: 1em;
+}
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* কালো overlay */
+}
+/* nav  */
+.nav-items{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+.nav-links{
+    display: flex;
+    gap: 48px;
+    font-size: 1.5em;
+    text-align: center;
+}
+/* banner */
+.banner,.plants,.plants-lover{
+    margin-top: 100px;
+}
+.banner-content{
+    display: flex;
+    align-items: center;
+}
+.banner-text h1,.plants-lover-text h1{
+    font-size: 3.8em;
+    margin-bottom: 18px;
+}
+.banner-text p,.plants-lover-text p{
+    font-size: 1.25em;
+}
+/* Plants */
+.plant-title,.deals-title{
+    font-size: 1.6em;
+    text-align: center;
+}
+.card{
+    text-align: center;
+    line-height: 24px;
+}
+.plant-cards{
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+.plant-cards p{
+    font-size: 1.5em;
+    font-weight: 800;
+}
+/* Plants Lover */
+.plants-lover{
+    margin-top: 150px;
+    position: relative;
+}
+.plants-lover-content{
+    display: flex;
+    gap: 60px;
+    z-index: 1;
+}
+.plants-lover-text ul{
+    font-size: 1.5em;
+}
+.plants-lover-text ul li{
+    margin-bottom: 14px;
+}
+.plant-badge img{
+    position: absolute;
+    width: 286px;
+    height: 286px;
+    left: 50%;
+    transform: translate(-70%,-50%);
+    z-index: 2;
+    background: none;
+}
+/* Deals */
+.deals{
+    margin-top: 150px;
+}
+.deals-section {
+  display: flex;
+  gap: 20px;
+  margin-top: 50px;
+}
+.deals-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+.deals-right {
+  flex: 2;
+}
+.deal-card{
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: transparent;
+}
+.deal-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.deal-info,.join-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background: transparent;
+  z-index: 2;
+}
+.deal-info h3,
+.deal-info p,
+.deal-info a {
+  background: none;
+}
+.deal-info h3 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.deal-info a{
+    color: white;
+    font-size: 1.5em;
+}
+.small {
+  height: 200px;
+}
+.large {
+  height: 420px;
+}
+/* Join section */
+.join{
+    max-width: 100%;
+    margin-top: 120px;
+    margin-left: -135px;
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+    background-color: transparent;
+}
+.join-info h1{
+    font-size: 3.5rem;
+}
+.join-text-btn{
+    display: flex;
+    margin-left: -2px;
+}
+.join-info input{
+    padding: 24px 20px;
+    width: 500px;
+}
+
+@media (max-width:576px) {
+    body{
+        width: 90%;
+    }
+    .links-hide{
+        display: none;
+    }
+    .banner-content{
+        flex-direction: column-reverse;
+    }
+    .banner-content h1{
+        font-size: 3em;
+    }
+    .plant-cards{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    }
+    .card ,.card img{
+        width: 90%;
+    }
+    .card .btn{
+        font-size: 0.5em;
+    }
+    .plants-lover-content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .plants-lover-text h1{
+        font-size: 3em;
+    }
+    .plant-badge img{
+        display: none;
+    }
+    .deals{
+        margin-top: 50px;
+    }
+    .deals-section {
+    flex-direction: column;
+    }
+    .deals-right {
+        flex: 1;
+    }
+    .small,.large {
+        height: 200px;
+    }
+    .join-info h1 {
+        font-size: 1.6rem;
+    }
+    .join-text-btn {
+        width: 350px;
+    }
+    .join{ 
+        margin-left: -29px;
+    }
+
+}
