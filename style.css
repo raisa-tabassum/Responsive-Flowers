@@ -293,4 +293,10 @@ header,.banner,.plants,.plants-lover,.deals{
         width: 30%;
         padding: 1px;
     }
+    
+    .footer-items{
+    flex-direction: column;
+    padding: 40px;
+    gap: 0px;
+    }
 }
