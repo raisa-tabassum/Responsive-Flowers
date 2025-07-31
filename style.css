@@ -35,7 +35,17 @@ header,.banner,.plants,.plants-lover,.deals{
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* কালো overlay */
+  background: rgba(0, 0, 0, 0.4);
+}
+@keyframes badge-animation {
+    0%{
+        opacity: 1;
+        transform: translate(-60%,-50%) rotate(0deg);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(-60%,-50%) rotate(360deg);
+    }
 }
 /* nav  */
 .nav-items{
@@ -55,15 +65,15 @@ header,.banner,.plants,.plants-lover,.deals{
 }
 .banner-content{
     display: flex;
-    align-items: center;
+    align-items: center;  
 }
-.banner-text h1,.plants-lover-text h1{
-    font-size: 3.8em;
+.banner-text h1{
+    font-size: 2em;
     margin-bottom: 18px;
 }
-.banner-text p,.plants-lover-text p{
+/* .banner-text p{
     font-size: 1.25em;
-}
+} */
 /* Plants */
 .plant-title,.deals-title{
     font-size: 1.6em;
@@ -94,8 +104,12 @@ header,.banner,.plants,.plants-lover,.deals{
     gap: 60px;
     z-index: 1;
 }
+.plants-lover-text h1{
+    font-size: 3.5em;
+}    
 .plants-lover-text ul{
-    font-size: 1.5em;
+    font-size: 1.4em;
+    padding-left: 30px;
 }
 .plants-lover-text ul li{
     margin-bottom: 14px;
@@ -105,9 +119,10 @@ header,.banner,.plants,.plants-lover,.deals{
     width: 286px;
     height: 286px;
     left: 50%;
-    transform: translate(-70%,-50%);
     z-index: 2;
     background: none;
+    
+    animation: badge-animation 2s linear infinite;
 }
 /* Deals */
 .deals{
@@ -262,7 +277,7 @@ header,.banner,.plants,.plants-lover,.deals{
         max-width: 100%;
     }
     .plants-lover-text h1{
-        font-size: 2.6em;
+        font-size: 2.5em;
     }
     .plant-badge img{
         display: none;
@@ -293,7 +308,6 @@ header,.banner,.plants,.plants-lover,.deals{
         width: 30%;
         padding: 1px;
     }
-    
     .footer-items{
     flex-direction: column;
     padding: 40px;
